@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+
+body {
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+  background-color: rgb(0, 0, 0);
+    
+}
+
+.centrar{
+  margin: auto;
+  width: 90%;
+  max-width: 1300px;
+  display: flex;
+  flex-direction: row;/*Los elementos se ponen al lado menu main y aside*/
+  flex-wrap: wrap;/*Los elementos que no caben se pongan abajo*/
+}
+
+
+.header{
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 7%;
+  border-bottom: var(--border);
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+}
+
+.header .logo img{
+ width: 250px;
+}
+
+.header .navbar a{
+  margin: 0 30px;
+  font-size: 30px;
+  color: #F8F0FF;
+  text-decoration: none;
+}
+
+.header .navbar a:hover{
+  color: var(--main-color);
+  border-bottom: .1rem solid var(--main-color);
+  padding-bottom: .5rem;
+}
+
+.header .icons div{
+  color: #F8F0FF;
+  cursor: pointer;
+  font-size: 2.5rem;
+  margin-left: 2rem;
+}
+
+#menu-btn{
+  display: none;
+}
+
+
+
+.container{
+  height: auto;
+}
+
+.redes{
+	position: fixed;
+	right: 0;
+	top: 350px;
+	z-index: 2000;
+	
+}
+
+.redes ul{
+list-style: none;
+	
+}
+
+.redes ul li a{
+	display: inline-block;
+	color: #F8F0FF;
+	background: #FFDE39;
+	padding: 7px;
+	text-decoration: none;
+	-webkit-transition: all 500ms ease;
+	-o-transition:all 500ms ease;
+	transition: all 50ms ease;
+	
+}
+
+.redes ul li a:hover{
+	padding: 5px 30px;
+	background: rgb(0, 0, 0);	
+}
+
+
+
+.presentacion {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos se muevan a la siguiente línea */
+  margin-top: 150px;
+  
+}
+
+.caja {
+  flex: 1; /* Hace que ambas cajas ocupen el mismo ancho */
+  padding: 20px;
+  box-sizing: border-box; /* Asegura que el padding se incluya en el ancho total */
+  background-color: rgb(0, 0, 0);
+}
+
+.dos h3{
+  font-size: 50px;
+  color: #FFA516;
+  margin-top: 15px;
+  margin-bottom: 50px;
+  padding-left: 2rem;
+}
+
+.dos p{
+  font-size: 20px;
+  color: #F8F0FF;
+  line-height: 1.8;
+  padding-left: 2rem;
+}
+
+
+
+
+.menu .box-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem,1fr));
+  gap: 1.5rem;
+}
+
+.menu .box-container .box{
+  padding:5rem;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.menu .box-container .box img{
+  height:15rem;
+}
+
+.menu .box-container .box:hover{
+  background: #FFDE39;
+}
+
+.menu .box-container .box:hover > *{
+  background: #FFDE39;
+}
+
+
+
+
+
+.contenedor1 .row{
+  display: flex;
+  background: rgb(0, 0, 0);
+  flex-wrap: wrap;
+  width: 95%; /* o cualquier ancho que desees */
+}
+
+.contenedor1 .row {
+  flex: 1 1 45rem;
+}
+
+.contenedor1 .row  h3{
+  font-size: 50px;
+  color:  #FFA516;
+  text-align: center;
+  padding-left: 1rem;
+  padding-top: 7rem ;
+  text-decoration: none;
+  margin-bottom: 50px;
+}
+
+.contenedor1 .row .content p{
+  font-size: 20px;
+  color: #F8F0FF;
+  line-height: 1.8;
+  padding-bottom: 8rem;
+  padding-left: 4rem;
+}
+
+
+
+
+.projects .box-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem,1fr));
+  gap: 1.5rem;
+}
+
+.projects .box-container .box{
+  padding:5rem;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.projects .box-container .box img{
+  height:20rem;
+  align-items: center;
+}
+
+.projects .box-container .box:hover{
+  background: #FFA516;
+}
+
+.projects .box-container img:hover{
+  transform: scale(1.1);
+}
+
+
+
+footer {
+  padding: 1rem;
+  font-size: 1rem;
+  color: #F8F0FF;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+ @media (max-width:901px){
+    
+#menu-btn{
+    display: inline-block;
+}
+
+.header .navbar{
+    position: absolute;
+    top: 100%; 
+    right: -150%;
+    background: #00D0BF;
+    width: 15rem;
+    margin-right: 230px;
+}
+
+.header .navbar.active{
+    right: 0;
+
+}
+
+.header .logo img{
+  width: 180px;
+ }
+
+.header .navbar a{
+    display: block;
+    margin: 20px;
+    padding: 15px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.caja {
+    flex-basis: 100%; /* Cada caja ocupará el 100% del ancho, moviéndose una debajo de la otra */
+}
+
+.dos h3{
+  margin-top: 0px;
+}
+
+}
